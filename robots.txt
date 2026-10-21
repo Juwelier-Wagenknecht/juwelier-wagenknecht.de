@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://juwelier-wagenknecht.de/sitemap.xml
+Disallow: /
