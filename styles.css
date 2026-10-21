@@ -1218,3 +1218,8 @@ a[href^="mailto:"]{overflow-wrap:normal;word-break:keep-all}
 .tiefe img.textur{filter:saturate(.88) contrast(1.06) blur(1.5px)}
 .ring-bild img[src*="seiko-presage"]{object-position:50% 0}
 @media (max-width:900px){.duo-bild:has(img[src*="palido-donauwoerth-solitaer"]){aspect-ratio:4/3;height:auto}.duo-bild img[src*="palido-donauwoerth-solitaer"]{height:100%}}
+
+/* 21.10.2026 (Evelyn im Call): Öffnungszeiten am Computer zu klein und pixelig → Seitenschrift statt Cutive Mono, größer, gleich breite Ziffern */
+.zeiten{font-size:16px}
+.zeiten td{color:#e2e4e6}
+.zeiten td:last-child{font-family:inherit;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:.01em}
