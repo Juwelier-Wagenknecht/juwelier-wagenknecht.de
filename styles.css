@@ -1226,3 +1226,22 @@ a[href^="mailto:"]{overflow-wrap:normal;word-break:keep-all}
 .zeiten{font-size:16px}
 .zeiten td{color:#e2e4e6}
 .zeiten td:last-child{font-family:inherit;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+/* Markenleiste: echte Links (Kundenmail 21.10.) */
+.marken a.m-logo{text-decoration:none;cursor:pointer}
+.marken a.m-logo:not(.m-bild)::after{content:"\2197";margin-left:10px;font-size:15px;letter-spacing:0;color:var(--gold-hell)}
+.marken a.m-logo:hover,.marken a.m-logo:focus-visible,.ringe-marke a.m-logo:hover,.ringe-marke a.m-logo:focus-visible{background:rgba(255,255,255,.1);border-color:var(--gold-hell);color:#fff}
+.ringe-marke a.m-logo.m-bild{min-height:64px}
+.weihnacht[hidden]{display:none}
+@media (max-width:900px){.weihnacht .duo-bild{aspect-ratio:4/3;min-height:0}.weihnacht .duo-bild img{object-position:50% 45%}}
+.weihnacht .duo-bild img{object-position:50% 55%}
+@media (max-width:900px){.marken .m-logo.m-bild{grid-column:1/-1}}
+@media (max-width:900px){.marken{grid-template-columns:1fr}.marken .m-logo.m-bild{grid-column:auto}}
+
+/* 22.10.2026: Markenleiste als volle Dreier-Reihe (Palido rutschte am Desktop allein in Zeile 2); Weihnachtsbild zeigt das ganze Palido-Logo */
+@media (min-width:901px){
+  .marken{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .marken .m-titel{grid-column:1/-1}
+  .marken .m-logo{display:flex;align-items:center;justify-content:center;min-height:64px}
+}
+.weihnacht .duo-bild img{object-position:50% 8%}

@@ -352,3 +352,13 @@
   uhrSetzen();
   setInterval(uhrSetzen, 20000);
 })();
+
+/* Zeitlich begrenzte Bänder (data-bis = letzter Tag, ISO) blenden sich danach aus; ohne Skript bleiben sie sichtbar. */
+(function () {
+  try {
+    var heute = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll("[data-bis]").forEach(function (el) {
+      if (heute > el.getAttribute("data-bis")) el.hidden = true;
+    });
+  } catch (e) {}
+})();
