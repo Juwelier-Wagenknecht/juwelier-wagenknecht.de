@@ -890,8 +890,8 @@ body.hat-buehne.menu-offen .brenner{color:#fff;border-color:var(--linie)}
 
 
 /* WhatsApp auf der Geschäftsnummer — Evelyn, 18.09.2026: „Könnte man dies sichtbar machen?!" */
-.topbar .tb-wa{color:var(--gold-hell)}
-.topbar .tb-wa:hover{color:#fff}
+.topbar .tb-wa{color:#e4e1da}
+.topbar .tb-wa:hover{color:var(--gold-hell)}
 @media (max-width:980px){.topbar .tb-mail{display:none}}
 @media (max-width:900px){.kopf > .wrap{min-height:80px}.marke .logo-kopf{height:60px}}
 @media (max-width:560px){.marke.gross img{height:92px}}
@@ -1247,3 +1247,29 @@ a[href^="mailto:"]{overflow-wrap:normal;word-break:keep-all}
   .marken .m-logo{display:flex;align-items:center;justify-content:center;min-height:64px}
 }
 .weihnacht .duo-bild img{object-position:50% 8%}
+
+/* Markenleiste: Name + Pfeil passen in die Kachel (03.11.2026) · Seiko-Karten mit Abstand zum Jubiläumsbild */
+.marken a.m-logo:not(.m-bild){letter-spacing:.1em;font-size:15px;padding:8px 12px;white-space:nowrap}
+.marken a.m-logo:not(.m-bild)::after{margin-left:6px}
+#seiko .duo + .ringe{margin-top:22px}
+/* Hausfotos: Giebel und Ladenfront ganz im Bild (03.11.2026) */
+img[src*="haus-eingang"]{object-position:center 72%}
+/* Palido-Weihnachtsbild ganz zeigen: Rahmen im Bildformat (03.11.2026) */
+.weihnacht .duo{align-items:center}
+.weihnacht .duo-bild{aspect-ratio:2008/1300;min-height:0;height:auto}
+.weihnacht .duo-bild img{object-position:50% 50%;scale:1}
+@media (max-width:900px){.weihnacht .duo-bild{aspect-ratio:2008/1300}.weihnacht .duo-bild img{object-position:50% 50%}}
+/* Zeitleiste 1908: Karten wie am Anfang (gleich groß, randlos), etwas schmaler (2:3-nah), damit Heute links/rechts
+   Platz abgibt statt oben/unten — Giebel und Laden bleiben ganz (03.11.2026) */
+.strahl .st-bild{aspect-ratio:.68}
+.st-bild img[src*="archiv-1"]{object-position:45% 50%}
+.st-bild img[src*="archiv-2"]{object-position:50% 0}
+.st-bild img[src*="archiv-3"]{object-position:50% 0}
+.st-bild img[src*="archiv-4"]{object-position:50% 0}
+.st-bild img[src*="haus-fassade"]{object-position:50% 0}
+/* Seiko-Jubiläumsbild (16:9 mit Schriftzug links) am Handy ganz zeigen (03.11.2026) */
+@media (max-width:900px){.duo-bild:has(img[src*="seiko-145"]){aspect-ratio:16/9;min-height:0}}
+/* Zeitleiste: Jahreszahl statt Unterüberschrift (03.11.2026) */
+.st-text.st-jahr{margin-top:18px;font-size:22px;letter-spacing:.02em;color:var(--gold-hell)}
+@media (max-width:900px){.st-text.st-jahr{font-size:19px}}
+@media (min-width:481px) and (max-width:900px){.station .st-text.st-jahr{margin-top:0;grid-row:1 / span 3;align-self:center;font-size:22px}}
