@@ -1273,3 +1273,12 @@ img[src*="haus-eingang"]{object-position:center 72%}
 .st-text.st-jahr{margin-top:18px;font-size:22px;letter-spacing:.02em;color:var(--gold-hell)}
 @media (max-width:900px){.st-text.st-jahr{font-size:19px}}
 @media (min-width:481px) and (max-width:900px){.station .st-text.st-jahr{margin-top:0;grid-row:1 / span 3;align-self:center;font-size:22px}}
+/* Handy-Feinschliff zum Livegang (08.11.2026) */
+.duo-bild{max-width:100%}
+@media (max-width:900px){.duo-bild:has(img[src*="palido-donauwoerth-solitaer"]){min-height:0;width:100%}}
+@media (max-width:900px){.duo-bild{width:100%}}
+.feld select{min-height:48px;-webkit-appearance:none;appearance:none;padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c9a45c' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+@media (max-width:380px){.karte{padding:24px 20px}.karte h3{font-size:18px}}
+p,li,dd,address,td{overflow-wrap:break-word}
+@media (max-width:380px){.recht h2{font-size:22px!important}}
+@media (max-width:380px){.ik a[href^="mailto"]{font-size:14.5px}}
